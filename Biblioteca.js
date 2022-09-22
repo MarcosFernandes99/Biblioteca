@@ -34,6 +34,15 @@ class Biblioteca {
         })
         return emprestimo
     }
+
+    DevolverLivro(nomeParametro){
+        livros.forEach(nome => {
+            if(nome.Titulo == nomeParametro){
+                nome.Disponibilidade = true
+            }
+        })
+
+    }
 }
 
 let primeiroLivro = new Livro()
@@ -69,6 +78,7 @@ primeiraBiblioteca.Endereco = "End 1"
 primeiraBiblioteca.Telefone = "Telefone 1"
 primeiraBiblioteca.BuscarLivro(segundoLivro.Titulo)
 console.log(primeiraBiblioteca.EmprestarUmLivro(segundoLivro.Titulo))
+primeiraBiblioteca.DevolverLivro(segundoLivro.Titulo)
 
 
 
